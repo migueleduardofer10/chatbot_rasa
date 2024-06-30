@@ -1,0 +1,33 @@
+version: "3.1"
+
+intents:
+  - saludar
+  - preguntar_demografia
+  - despedida
+
+entities:
+  - pais
+
+slots:
+  pais:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pais
+
+responses:
+  utter_saludar:
+    - text: "¡Hola! ¿Cómo puedo ayudarte con los datos demográficos hoy?"
+
+  utter_despedida:
+    - text: "¡Adiós!"
+
+  utter_pedir_pais:
+    - text: "Por favor, proporcione el nombre del país del que desea información demográfica."
+
+actions:
+  - action_proveer_demografia
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

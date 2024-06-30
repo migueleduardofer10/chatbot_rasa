@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+- intent: saludar
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - qué tal
+    - hola, ¿qué tal?
+    - saludos
+
+- intent: despedida
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos
+    - chau
+    - hasta pronto
+
+- intent: afirmar
+  examples: |
+    - sí
+    - claro
+    - por supuesto
+    - correcto
+
+- intent: negar
+  examples: |
+    - no
+    - nunca
+    - no creo
+    - no es así
+
+- intent: preguntar_demografia
+  examples: |
+    - ¿Cuáles son los indicadores demográficos de [India](pais)?
+    - Dime los datos demográficos de [China](pais).
+    - Muéstrame los datos demográficos de [Brasil](pais).
+    - ¿Me puedes dar los datos demográficos de [Estados Unidos](pais)?
+    - Quisiera saber los indicadores demográficos de [México](pais).
+    - ¿Qué datos demográficos tienes de [Argentina](pais)?
