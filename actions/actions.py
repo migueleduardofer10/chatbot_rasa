@@ -66,14 +66,15 @@ class ActionProveerDemografia(Action):
             print(f"No se encontraron datos para {pais}.")
         else:
             # Mapear el tipo de dato a la columna correspondiente
+          # Mapear el tipo de dato a la columna correspondiente
             columnas = {
                 "población": "Población (Miles)",
-                "0 a 14": "0 a 14 (%)",
-                "15 a 64": "15 a 64 (%)",
-                "65 a más": "65 a más (%)",
+                "porcentaje de la población que tiene entre 0 a 14 años": "0 a 14 (%)",
+                "porcentaje de la población que tiene entre 15 a 64 años": "15 a 64 (%)",
+                "porcentaje de la población que tiene 65 años o más": "65 a más (%)",
                 "tasa de fecundidad": "Tasa de fecundidad total",
-                "esperanza de vida hombres": "Esperanza de vida al nacer Hombre",
-                "esperanza de vida mujeres": "Esperanza de vida al nacer Mujer"
+                "esperanza de vida al nacer de los hombres": "Esperanza de vida al nacer Hombre",
+                "esperanza de vida al nacer de las mujeres": "Esperanza de vida al nacer Mujer"
             }
             columna = columnas.get(tipo_dato.lower())
 
