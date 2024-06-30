@@ -19,25 +19,16 @@ nlu:
     - chau
     - hasta pronto
 
-- intent: afirmar
-  examples: |
-    - sí
-    - claro
-    - por supuesto
-    - correcto
-
-- intent: negar
-  examples: |
-    - no
-    - nunca
-    - no creo
-    - no es así
-
 - intent: preguntar_demografia
   examples: |
-    - ¿Cuáles son los indicadores demográficos de [India](pais)?
-    - Dime los datos demográficos de [China](pais).
-    - Muéstrame los datos demográficos de [Brasil](pais).
-    - ¿Me puedes dar los datos demográficos de [Estados Unidos](pais)?
-    - Quisiera saber los indicadores demográficos de [México](pais).
-    - ¿Qué datos demográficos tienes de [Argentina](pais)?
+    - ¿Cuál es la [población](tipo_dato) de [India](pais)?
+    - ¿Cuál es la [tasa de fecundidad total](tipo_dato) en [China](pais)?
+    - ¿Cuál es la [esperanza de vida al nacer de los hombres](tipo_dato) en [Brasil](pais)?
+    - ¿Cuál es la [esperanza de vida al nacer de las mujeres](tipo_dato) en [Estados Unidos](pais)?
+    - ¿Cuál es el porcentaje de la [población que tiene entre 0 a 14 años](tipo_dato) en [India](pais)?
+    - ¿Cuál es el porcentaje de la [población que tiene entre 15 a 64 años](tipo_dato) en [India](pais)?
+    - ¿Cuál es el porcentaje de la [población que tiene 65 años o más](tipo_dato) en [India](pais)?
+
+entities:
+  - pais
+  - tipo_dato

@@ -40,9 +40,12 @@ class ActionProveerDemografia(Action):
         print("Nombres de las columnas:", data.columns)
         print("Primeras filas del DataFrame:\n", data.head())
 
-        # Obtener el nombre del país
+        # Obtener el nombre del país y el tipo de dato solicitado
         pais = next(tracker.get_latest_entity_values("pais"), None)
+        tipo_dato = tracker.get_slot("tipo_dato")
+
         print("Entidad 'pais' recibida:", pais)
+        print("Entidad 'tipo_dato' recibida:", tipo_dato)
 
         if not pais:
             dispatcher.utter_message(text="Por favor, especifique un país.")
@@ -62,8 +65,24 @@ class ActionProveerDemografia(Action):
             dispatcher.utter_message(text=f"No se encontraron datos para {pais}.")
             print(f"No se encontraron datos para {pais}.")
         else:
-            respuesta = datos_pais.to_string(index=False)
-            dispatcher.utter_message(text=respuesta)
-            print("Respuesta enviada:\n", respuesta)
+            # Mapear el tipo de dato a la columna correspondiente
+            columnas = {
+                "población": "Población (Miles)",
+                "0 a 14": "0 a 14 (%)",
+                "15 a 64": "15 a 64 (%)",
+                "65 a más": "65 a más (%)",
+                "tasa de fecundidad": "Tasa de fecundidad total",
+                "esperanza de vida hombres": "Esperanza de vida al nacer Hombre",
+                "esperanza de vida mujeres": "Esperanza de vida al nacer Mujer"
+            }
+            columna = columnas.get(tipo_dato.lower())
+
+            if columna and columna in datos_pais.columns:
+                respuesta = datos_pais[columna].values[0]
+                dispatcher.utter_message(text=f"El {tipo_dato} de {pais} es {respuesta}.")
+                print(f"El {tipo_dato} de {pais} es {respuesta}.")
+            else:
+                dispatcher.utter_message(text=f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
+                print(f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
 
         return []

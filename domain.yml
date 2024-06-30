@@ -7,6 +7,7 @@ intents:
 
 entities:
   - pais
+  - tipo_dato
 
 slots:
   pais:
@@ -14,6 +15,11 @@ slots:
     mappings:
       - type: from_entity
         entity: pais
+  tipo_dato:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tipo_dato
 
 responses:
   utter_saludar:
