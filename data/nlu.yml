@@ -19,16 +19,90 @@ nlu:
     - chau
     - hasta pronto
 
-- intent: preguntar_demografia
+- intent: preguntar_poblacion
   examples: |
     - ¿Cuál es la [población](tipo_dato) de [India](pais)?
-    - ¿Cuál es la [tasa de fecundidad](tipo_dato) en [China](pais)?
-    - ¿Cuál es la [esperanza de vida al nacer de los hombres](tipo_dato) en [Brasil](pais)?
-    - ¿Cuál es la [esperanza de vida al nacer de las mujeres](tipo_dato) en [Estados Unidos](pais)?
-    - ¿Cuál es el [porcentaje de la población que tiene entre 0 a 14 años](tipo_dato) en [India](pais)?
-    - ¿Cuál es el [porcentaje de la población que tiene entre 15 a 64 años](tipo_dato) en [India](pais)?
-    - ¿Cuál es el [porcentaje de la población que tiene 65 años o más](tipo_dato) en [India](pais)?
+    - ¿Cuántos [habitantes](tipo_dato) tiene [China](pais)?
+    - ¿Cuántas [personas](tipo_dato) viven en [Brasil](pais)?
+    - ¿Cuál es la [población total](tipo_dato) de [México](pais)?
 
-entities:
-  - pais
-  - tipo_dato
+- intent: preguntar_0_14
+  examples: |
+    - ¿Cuál es el [porcentaje de la población que tiene entre 0 a 14 años](tipo_dato) en [India](pais)?
+    - ¿Qué [porcentaje de la población que tiene entre 0 a 14 años](tipo_dato) en [Brasil](pais)?
+    - ¿Cuál es el [porcentaje de niños](tipo_dato) en [México](pais)?
+    - ¿Qué [porcentaje de jóvenes](tipo_dato) hay en [Nigeria](pais)?
+
+- intent: preguntar_15_64
+  examples: |
+    - ¿Cuál es el [porcentaje de la población que tiene entre 15 a 64 años](tipo_dato) en [China](pais)?
+    - ¿Cuál es el [porcentaje de adultos](tipo_dato) en [Japón](pais)?
+    - ¿Qué [porcentaje de la población adulta](tipo_dato) hay en [Alemania](pais)?
+
+- intent: preguntar_65_mas
+  examples: |
+    - ¿Cuál es el [porcentaje de la población que tiene 65 años o más](tipo_dato) en [India](pais)?
+    - ¿Qué [porcentaje de ancianos](tipo_dato) hay en [Francia](pais)?
+    - ¿Cuál es el [porcentaje de la población anciana](tipo_dato) en [España](pais)?
+    - ¿Qué [porcentaje de la población mayor de 65 años](tipo_dato) hay en [Italia](pais)?
+
+- intent: preguntar_tasa_fecundidad
+  examples: |
+    - ¿Cuál es la [tasa de fecundidad](tipo_dato) en [China](pais)?
+    - ¿Cuál es la [tasa de fecundidad total](tipo_dato) en [Pakistán](pais)?
+    - ¿Cuál es la [fecundidad](tipo_dato) en [Indonesia](pais)?
+    - ¿Cuál es la [tasa de natalidad](tipo_dato) en [Nigeria](pais)?
+
+- intent: preguntar_esperanza_vida_hombres
+  examples: |
+    - ¿Cuál es la [esperanza de vida al nacer de los hombres](tipo_dato) en [Brasil](pais)?
+    - ¿Cuántos años de [esperanza de vida hombres](tipo_dato) tienen los hombres en [Estados Unidos](pais)?
+    - ¿Cuál es la [esperanza de vida de los hombres](tipo_dato) en [India](pais)?
+
+- intent: preguntar_esperanza_vida_mujeres
+  examples: |
+    - ¿Cuál es la [esperanza de vida al nacer de las mujeres](tipo_dato) en [Estados Unidos](pais)?
+    - ¿Cuál es la [esperanza de vida mujeres](tipo_dato) en [Japón](pais)?
+    - ¿Cuántos años de [vida mujeres](tipo_dato) hay en [Francia](pais)?
+
+- synonym: población
+  examples: |
+    - habitantes
+    - personas
+    - población total
+
+- synonym: tasa de fecundidad
+  examples: |
+    - tasa de fecundidad total
+    - fecundidad
+    - tasa de natalidad
+
+- synonym: esperanza de vida al nacer de los hombres
+  examples: |
+    - esperanza de vida hombres
+    - vida hombres
+    - esperanza de vida de los hombres
+
+- synonym: esperanza de vida al nacer de las mujeres
+  examples: |
+    - esperanza de vida mujeres
+    - vida mujeres
+
+- synonym: porcentaje de la población que tiene entre 0 a 14 años
+  examples: |
+    - niños
+    - 0 a 14
+    - jóvenes
+
+- synonym: porcentaje de la población que tiene entre 15 a 64 años
+  examples: |
+    - adultos
+    - 15 a 64
+    - población adulta
+
+- synonym: porcentaje de la población que tiene 65 años o más
+  examples: |
+    - ancianos
+    - 65 a más
+    - población anciana
+    - población mayor de 65 años

@@ -2,8 +2,14 @@ version: "3.1"
 
 intents:
   - saludar
-  - preguntar_demografia
   - despedida
+  - preguntar_poblacion
+  - preguntar_0_14
+  - preguntar_15_64
+  - preguntar_65_mas
+  - preguntar_tasa_fecundidad
+  - preguntar_esperanza_vida_hombres
+  - preguntar_esperanza_vida_mujeres
 
 entities:
   - pais

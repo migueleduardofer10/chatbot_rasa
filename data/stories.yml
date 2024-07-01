@@ -5,10 +5,40 @@ stories:
   steps:
   - intent: saludar
   - action: utter_saludar
-  - intent: preguntar_demografia
-  - action: utter_pedir_pais
+  - intent: preguntar_poblacion
+  - action: action_proveer_demografia
 
-- story: proveer demografía
+- story: preguntar población
   steps:
-  - intent: preguntar_demografia
+  - intent: preguntar_poblacion
+  - action: action_proveer_demografia
+
+- story: preguntar porcentaje 0 a 14
+  steps:
+  - intent: preguntar_0_14
+  - action: action_proveer_demografia
+
+- story: preguntar porcentaje 15 a 64
+  steps:
+  - intent: preguntar_15_64
+  - action: action_proveer_demografia
+
+- story: preguntar porcentaje 65 a más
+  steps:
+  - intent: preguntar_65_mas
+  - action: action_proveer_demografia
+
+- story: preguntar tasa de fecundidad
+  steps:
+  - intent: preguntar_tasa_fecundidad
+  - action: action_proveer_demografia
+
+- story: preguntar esperanza de vida hombres
+  steps:
+  - intent: preguntar_esperanza_vida_hombres
+  - action: action_proveer_demografia
+
+- story: preguntar esperanza de vida mujeres
+  steps:
+  - intent: preguntar_esperanza_vida_mujeres
   - action: action_proveer_demografia

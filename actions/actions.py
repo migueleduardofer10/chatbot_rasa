@@ -47,9 +47,9 @@ class ActionProveerDemografia(Action):
         print("Entidad 'pais' recibida:", pais)
         print("Entidad 'tipo_dato' recibida:", tipo_dato)
 
-        if not pais:
-            dispatcher.utter_message(text="Por favor, especifique un país.")
-            print("No se proporcionó un país.")
+        if not pais or not tipo_dato:
+            dispatcher.utter_message(text="Por favor, especifique un país y un tipo de dato.")
+            print("No se proporcionó un país o un tipo de dato.")
             return []
 
         # Buscar datos del país
@@ -66,7 +66,6 @@ class ActionProveerDemografia(Action):
             print(f"No se encontraron datos para {pais}.")
         else:
             # Mapear el tipo de dato a la columna correspondiente
-          # Mapear el tipo de dato a la columna correspondiente
             columnas = {
                 "población": "Población (Miles)",
                 "porcentaje de la población que tiene entre 0 a 14 años": "0 a 14 (%)",
@@ -76,7 +75,15 @@ class ActionProveerDemografia(Action):
                 "esperanza de vida al nacer de los hombres": "Esperanza de vida al nacer Hombre",
                 "esperanza de vida al nacer de las mujeres": "Esperanza de vida al nacer Mujer"
             }
-            columna = columnas.get(tipo_dato.lower())
+
+            # Verificar si el tipo_dato es un sinónimo conocido
+            tipo_dato = tipo_dato.lower()
+            if tipo_dato not in columnas:
+                dispatcher.utter_message(text=f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
+                print(f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
+                return []
+
+            columna = columnas[tipo_dato]
 
             if columna and columna in datos_pais.columns:
                 respuesta = datos_pais[columna].values[0]

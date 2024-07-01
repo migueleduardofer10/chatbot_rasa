@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-pais",
+      "2": "I-pais",
+      "3": "L-pais",
+      "4": "U-pais",
+      "5": "B-tipo_dato",
+      "6": "I-tipo_dato",
+      "7": "L-tipo_dato",
+      "8": "U-tipo_dato",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-pais": 1,
+      "I-pais": 2,
+      "L-pais": 3,
+      "U-pais": 4,
+      "B-tipo_dato": 5,
+      "I-tipo_dato": 6,
+      "L-tipo_dato": 7,
+      "U-tipo_dato": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
