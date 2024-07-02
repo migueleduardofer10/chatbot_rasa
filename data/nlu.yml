@@ -44,14 +44,14 @@ nlu:
     examples: |
       - ¿Cuál es el porcentaje de la población que tiene entre [15 a 64](tipo_dato) años en [China](pais)?
       - ¿Cuál es el porcentaje de [adultos](tipo_dato) en [Japón](pais)?
-      - ¿Qué porcentaje de la [población adulta](tipo_dato) hay en [Alemania](pais)?
+      - ¿Qué porcentaje de la población [adulta](tipo_dato) hay en [Alemania](pais)?
       - ¿Cuál es el porcentaje de la población que tiene entre [15 a 64](tipo_dato) años en el [total mundial](pais)?
 
   - intent: preguntar_65_mas
     examples: |
       - ¿Cuál es el porcentaje de la población que tiene [65 años a más](tipo_dato) en [India](pais)?
       - ¿Qué porcentaje de [ancianos](tipo_dato) hay en [Francia](pais)?
-      - ¿Cuál es el porcentaje de la [población anciana](tipo_dato) en [España](pais)?
+      - ¿Cuál es el porcentaje de la población [anciana](tipo_dato) en [España](pais)?
       - ¿Qué porcentaje de la población [mayor de 65](tipo_dato) años hay en [Italia](pais)?
       - ¿Cuál es el porcentaje de la población que tiene [65 años a más](tipo_dato) en el [total mundial](pais)?
 
@@ -111,7 +111,7 @@ nlu:
     examples: |
       - adultos
       - 15 a 64
-      - población adulta
+      - adulta
       - personas en edad laboral
       - población en edad productiva
       - personas adultas
@@ -121,7 +121,7 @@ nlu:
       - ancianos
       - 65 a más
       - 65 años a más
-      - población anciana
+      - anciana
       - mayor de 65 años
       - porcentaje de mayores
       - personas mayores

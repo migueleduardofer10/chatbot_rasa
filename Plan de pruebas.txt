@@ -24,12 +24,12 @@ Preguntas para probar "preguntar_poblacion"
 ¿Cuál es la población global?
 ¿Cuántas personas viven en el mundo?
 ¿Cuál es la población del total mundial?
-¿Cuál es la población total?  X
+¿Cuál es la población total?
 
 Preguntas para probar "preguntar_0_14"
 ¿Cuál es el porcentaje de la población que tiene entre 0 a 14 años en India?
 ¿Qué porcentaje de la población tiene entre 0 a 14 años en India? X 
-¿Cuál es el porcentaje de niños en India?
+¿Cuál es el porcentaje de niños en India? 
 ¿Qué porcentaje de jóvenes hay en India?
 ¿Cuál es el porcentaje de niños y jóvenes en India?
 ¿Cuál es el porcentaje de la población que tiene entre 0 a 14 años en el total mundial?

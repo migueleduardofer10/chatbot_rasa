@@ -1,0 +1,61 @@
+Saludar
+Hola
+Buenos días
+Buenas tardes
+Buenas noches
+Qué tal
+Hola, ¿qué tal?
+Saludos
+Despedida
+Adiós
+Hasta luego
+Nos vemos
+Chau
+Hasta pronto
+Preguntar Población
+¿Cuál es la población de India?
+¿Cuántos habitantes tiene China?
+¿Cuántas personas viven en Brasil?
+¿Cuál es la población total de México?
+¿Cuál es la población del total mundial?
+¿Cuántos habitantes tiene el total mundial?
+¿Cuál es la población global?
+¿Cuántas personas viven en el mundo?
+¿Cuál es la población del total mundial?
+¿Cuál es la población total?
+Preguntar porcentaje de la población que tiene entre 0 a 14 años
+¿Cuál es el porcentaje de la población que tiene entre 0 a 14 años en India?
+¿Qué porcentaje de la población tiene entre 0 a 14 años en Brasil?
+¿Cuál es el porcentaje de niños en México?
+¿Qué porcentaje de jóvenes hay en Nigeria?
+¿Cuál es el porcentaje de niños y jóvenes en México?
+¿Cuál es el porcentaje de la población que tiene entre 0 a 14 años en el total mundial?
+Preguntar porcentaje de la población que tiene entre 15 a 64 años
+¿Cuál es el porcentaje de la población que tiene entre 15 a 64 años en China?
+¿Cuál es el porcentaje de adultos en Japón?
+¿Qué porcentaje de la población adulta hay en Alemania?
+¿Cuál es el porcentaje de la población que tiene entre 15 a 64 años en el total mundial?
+Preguntar porcentaje de la población que tiene 65 años o más
+¿Cuál es el porcentaje de la población que tiene 65 años a más en India?
+¿Qué porcentaje de ancianos hay en Francia?
+¿Cuál es el porcentaje de la población anciana en España?
+¿Qué porcentaje de la población mayor de 65 años hay en Italia?
+¿Cuál es el porcentaje de la población que tiene 65 a más en el total mundial?
+Preguntar tasa de fecundidad
+¿Cuál es la tasa de fecundidad en China?
+¿Cuál es la tasa de fecundidad total en Pakistán?
+¿Cuál es la fecundidad en Indonesia?
+¿Cuál es la tasa de natalidad en Nigeria?
+¿Cuál es la tasa de fecundidad en el total mundial?
+Preguntar esperanza de vida al nacer de los hombres
+¿Cuál es la esperanza de vida al nacer de los hombres en Brasil?
+¿Cuántos años de esperanza de vida tienen los hombres en Estados Unidos?
+¿Cuál es la esperanza de vida de los hombres en India?
+¿De cuánto es la vida de los hombres en India?
+¿Cuál es la esperanza de vida al nacer de los hombres en el total mundial?
+Preguntar esperanza de vida al nacer de las mujeres
+¿Cuál es la esperanza de vida al nacer de las mujeres en Estados Unidos?
+¿Cuál es la esperanza de vida de las mujeres en Japón?
+¿Cuántos años de vida tienen las mujeres hay en Francia?
+¿De cuánto es la vida de las mujeres en India?
+¿Cuál es la esperanza de vida al nacer de las mujeres en el total mundial?
