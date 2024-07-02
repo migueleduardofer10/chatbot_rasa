@@ -52,18 +52,14 @@ class ActionProveerDemografia(Action):
             print("No se proporcionó un país o un tipo de dato.")
             return []
 
-        # Verificar si se solicita el "Total Mundial"
-        if pais.lower() == "total mundial":
-            datos_pais = data[data['País'].str.lower() == "total mundial"]
-        else:
-            # Ignorar la fila del "Total Mundial" y buscar datos del país
-            try:
-                datos_pais = data[(data['País'] != 'Total Mundial') & (data['País'].str.contains(pais, case=False, na=False))]
-                print("Datos del país encontrados:\n", datos_pais)
-            except KeyError as e:
-                dispatcher.utter_message(text=f"Error de clave: {e}")
-                print("Error de clave:", str(e))
-                return []
+        # Buscar datos del país, tomando en cuenta sinónimos y variaciones
+        try:
+            datos_pais = data[data['País'].str.contains(pais, case=False, na=False)]
+            print("Datos del país encontrados:\n", datos_pais)
+        except KeyError as e:
+            dispatcher.utter_message(text=f"Error de clave: {e}")
+            print("Error de clave:", str(e))
+            return []
 
         if datos_pais.empty:
             dispatcher.utter_message(text=f"No se encontraron datos para {pais}.")
@@ -82,13 +78,19 @@ class ActionProveerDemografia(Action):
 
             # Verificar si el tipo_dato es un sinónimo conocido
             tipo_dato = tipo_dato.lower()
-            if tipo_dato in columnas:
-                columna = columnas[tipo_dato]
-                valor = datos_pais[columna].values[0]
-                dispatcher.utter_message(text=f"El {tipo_dato} en {pais} es {valor}.")
-                print(f"La {tipo_dato} en {pais} es {valor}.")
+            if tipo_dato not in columnas:
+                dispatcher.utter_message(text=f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
+                print(f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
+                return []
+
+            columna = columnas[tipo_dato]
+
+            if columna and columna in datos_pais.columns:
+                respuesta = datos_pais[columna].values[0]
+                dispatcher.utter_message(text=f"El {tipo_dato} de {pais} es {respuesta}.")
+                print(f"El {tipo_dato} de {pais} es {respuesta}.")
             else:
-                dispatcher.utter_message(text=f"No se reconoce el tipo de dato: {tipo_dato}.")
-                print(f"No se reconoce el tipo de dato: {tipo_dato}.")
+                dispatcher.utter_message(text=f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
+                print(f"No se encontró el tipo de dato '{tipo_dato}' para {pais}.")
 
         return []
